@@ -6,12 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout;
 import com.scu.miomin.shswiperefresh.view.SHListView;
-import com.yin.lestin.lestindemo.BuildConfig;
 import com.yin.lestin.lestindemo.R;
 import com.yin.lestin.lestindemo.ui.adapter.SimpleLvAdapter;
 
@@ -30,6 +30,18 @@ public class MainActivity extends AppCompatActivity {
         initData();
         initLv();
         initSwipeRefreshLayout();
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:
+                        startActivity(new Intent(getApplicationContext(),AShowImage.class));
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
 
     }
 
@@ -48,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
         final View view = inflater.inflate(R.layout.refresh_view, null);
         final TextView textView = (TextView) view.findViewById(R.id.title);
+
         swipeRefreshLayout.setFooterView(view);
         swipeRefreshLayout.setOnRefreshListener(new SHSwipeRefreshLayout.SHSOnRefreshListener() {
             @Override
@@ -113,8 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void initData() {
         mDatas = new ArrayList();
-        for (int i = 'A'; i < 'z'; i++) {
-            mDatas.add("" + (char) i);
-        }
+        mDatas.add("网络请求");
+        mDatas.add("显示图片");
     }
 }
