@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         startActivity(new Intent(getApplicationContext(),AShowImage.class));
                         break;
+                    case 1:
+                        startActivity(new Intent(getApplicationContext(),ARequestNet.class));
+                        break;
                     default:
                         break;
                 }
@@ -126,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void initData() {
         mDatas = new ArrayList();
-        mDatas.add("网络请求");
         mDatas.add("显示图片");
+        mDatas.add("网络请求");
     }
 }
