@@ -34,7 +34,7 @@ public class CustomAppGlideModule extends AppGlideModule {
      * @param context
      * @param registry
      */
-    @Override
+//    @Override
     public void registerComponents(Context context, Registry registry) {
 
         registry.append(String.class, InputStream.class,new CustomBaseGlideUrlLoader.Factory());
