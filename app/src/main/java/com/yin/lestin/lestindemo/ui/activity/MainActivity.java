@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    // 合并
     private List<String> mDatas;
     private SHSwipeRefreshLayout swipeRefreshLayout;
     private SHListView lv;
