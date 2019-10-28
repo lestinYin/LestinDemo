@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     // 合并
     private List<String> mDatas;
     private SHSwipeRefreshLayout swipeRefreshLayout;
+    private View view;
     private SHListView lv;
 
     @Override
@@ -56,7 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initLv() {
         lv = (SHListView) findViewById(R.id.lv);
+        view =  findViewById(R.id.view);
         lv.setAdapter(new SimpleLvAdapter(this,mDatas));
+
+        view.setTranslationX(500F);
+        view.setAlpha(0.3F);
     }
 
     private void initSwipeRefreshLayout() {

@@ -8,7 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Common-Lib/IM/IMKit" />
+            <option value="$PROJECT_DIR$/Common-Lib/IM/IMLib" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/im" />
             <option value="$PROJECT_DIR$/shswiperefresh" />
           </set>
         </option>

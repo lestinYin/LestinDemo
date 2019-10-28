@@ -1,1 +1,3 @@
-include ':app',':shswiperefresh'
+include ':app', ':shswiperefresh', ':im', ':IMKit', ':IMLib'
+project(':IMLib').projectDir = new File('Common-lib/IM/IMLib')
+project(':IMKit').projectDir = new File('Common-lib/IM/IMKit')

@@ -1,4 +1,8 @@
 apply plugin: 'com.android.application'
+//各模块中kotlin文件可以相互调用
+apply plugin: 'kotlin-android'
+//减少findviewbyid
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
@@ -43,7 +47,6 @@ dependencies {
 
             ':shswiperefresh')
 
-    implementation 'com.android.support:appcompat-v7:27.0.1'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'io.reactivex:rxjava:1.0.14'
     implementation 'io.reactivex:rxandroid:1.0.1'
@@ -52,10 +55,11 @@ dependencies {
 //    implementation 'com.github.bumptech.glide:glide:4.0.0-RC0'
 //    implementation 'com.github.bumptech.glide:compiler:4.0.0-RC0'
     //glide
-    implementation ("com.github.bumptech.glide:glide:4.9.0") {
+    implementation("com.github.bumptech.glide:glide:4.9.0") {
         exclude group: 'com.android.support'
     }
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(':IMLib')
+    implementation project(':IMKit')
 }
-
-
