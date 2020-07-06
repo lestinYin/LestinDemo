@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html><head><link rel="stylesheet" type="text/css" href="http://webapi.amap.com/theme/v1.3/style1536672475627.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="webname">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/add.css">
+    <link type="text/css" rel="stylesheet" href="css/BreakingNews.css">
+    <link type="text/css" rel="stylesheet" href="css/flexslider.css">
+    <script src="http://webapi.amap.com/maps?v=1.3&amp;key=b32c12a4ca7d4c0e20eb6d76097c4130"></script><style type="text/css">.amap-container{cursor:url(http://webapi.amap.com/theme/v1.3/openhand.cur),default;}.amap-drag{cursor:url(http://webapi.amap.com/theme/v1.3/closedhand.cur),default;}</style>
+    <!--图形插件-->
+    <link href="css/photoswipe.min.css" rel="stylesheet">
+    <link href="css/default-skin.min.css" rel="stylesheet">
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+
+    <title>时装在此工厂店（示范）</title>
+    <style>
+    #body {
+        background: #f5f5f5;
+    }
+
+    p.image-container {
+        width: 100%;
+        height: 0;
+        padding-bottom: 65%;
+        overflow: hidden;
+    }
+
+    p.image-container img {
+        width: 100%;
+    }
+
+    .on-error {
+        color: #c5c5c5;
+        display: none;
+    }
+
+    .on-error img {
+        width: 80px;
+        max-width: 50%;
+    }
+
+    #on-error-title {
+        margin: 15px auto;
+    }
+
+    .outer-container {
+        display: none;
+    }
+
+    .btn-backtotop {
+        display: none;
+    }
+
+    .company-pro .text-container h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: keep-all;
+        word-wrap: normal;
+        white-space: nowrap;
+    }
+
+    .company-pro .text-container p {
+        min-height: 3.8rem;
+        line-height: 1.5rem;
+        max-height: 4.4rem;
+        overflow: hidden;
+    }
+
+    .review-tit .nickname {
+        line-height: 25px;
+    }
+
+    .no-data {
+        padding: 25px 0;
+    }
+
+    .no-data img {
+        width: 140px;
+    }
+
+    .divider {
+        height: 1px;
+        width: 100%;
+        background: #f5f5f5;
+    }
+
+    .reload-button {
+        color: #808080;
+        border: none;
+        padding: 6px 12px;
+        background: none;
+    }
+    .BreakingNewsController {
+        display: none;
+        margin: 0 0;
+    }
+    .BreakingNewsController .bn-title {
+        background: url("./images/speaker-Orange.gif") left center no-repeat!important;
+        background-size: 18px!important;
+        color: #ee6b11!important;
+        padding-left: 19px;
+        margin-left: 16px;
+        padding-right: 0;
+        height: 19px;
+    }
+    .BreakingNewsController ul {
+        padding-top: 0;
+        right: 36px;
+    }
+    .BreakingNewsController ul li {
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+    .BreakingNewsController ul li a {
+        vertical-align: bottom;
+        display: block;
+    }
+    .BreakingNewsController .bn-arrows {
+        width:20px;
+    }
+    .BreakingNewsController .bn-arrows span {
+        opacity:1;
+    }
+    .BreakingNewsController .bn-close{
+        right:10px;
+        background:url("./images/icon_close_dialog.png") right center no-repeat;
+        background-size: 14px;
+    }
+
+</style><link rel="stylesheet" href="http://www.7shangjie.com/resources/layer/skin/layer.css" id="layui_layer_skinlayercss" style=""><link rel="stylesheet" href="http://www.7shangjie.com/resources/layer/skin/layer.ext.css" id="layui_layer_skinlayerextcss" style=""></head>
+
+
+<body id="body">
+<!--点击轮播图之后的-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button id="closeImg" class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<span class="deg" style="display: none"></span>
+<div class="on-error">
+    <center style="margin-top: 40%;">
+        <img src="images/cont_icon_n@3x.png">
+        <h2 id="on-error-title"></h2>
+    </center>
+</div>
+<!--这一个div主要是点击大图隐藏后面用的-->
+<div class="outer-container" style="display: block;">
+    <!--banner 轮播图-->
+    <div class="banner">
+        <div class="s1" style="background: url(&quot;images/bg.jpg&quot;) center center / cover no-repeat;">
+
+            <div class="flex-viewport" style="overflow: hidden; position: relative;"><ul id="slides" class="slides" style="width: 2000%; transition-duration: 0s; transform: translate3d(-5760px, 0px, 0px);"><li class="s2 clone" data-index="7" aria-hidden="true" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344776505_10990722.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=Y7LGFtMyO2eE9%2BwCJ12CbBLS0rs%3D" draggable="false"></p></li><li class="s2" data-index="0" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344775364_8964360.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=cXWDaw0IOusdKWm/zm6w5yxY94Y%3D" draggable="false"></p></li><li class="s2" data-index="1" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344775574_6235677.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=mvRIpcV%2BmtscMvwsRlezMGTNMLE%3D" draggable="false"></p></li><li class="s2" data-index="2" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344775987_2726842.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=bXJkCdGzEhEbZWfYsW7T4n19rkw%3D" draggable="false"></p></li><li class="s2 flex-active-slide" data-index="3" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344776216_8626261.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=bq2sOsehCIpupkgW8Hbj5qr7Lj4%3D" draggable="false"></p></li><li class="s2" data-index="4" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344776329_9968145.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=xqzh6d77qp42AnXdjG0SwVSGeHc%3D" draggable="false"></p></li><li class="s2" data-index="5" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344776407_10980520.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=W42D%2BH0lTciMwYGeuccY%2BJZtiMg%3D" draggable="false"></p></li><li class="s2" data-index="6" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344776480_2697670.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=3CsXULOhKQj%2BloNCX/OQ%2BmNztaY%3D" draggable="false"></p></li><li class="s2" data-index="7" data-thumb-alt="" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344776505_10990722.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=Y7LGFtMyO2eE9%2BwCJ12CbBLS0rs%3D" draggable="false"></p></li><li class="s2 clone" data-index="0" aria-hidden="true" style="width: 1440px; margin-right: 0px; float: left; display: block;"><p class="image-container"> <img src="http://docks.7shangjie.com/enterprise/1/profile/1514344775364_8964360.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=cXWDaw0IOusdKWm/zm6w5yxY94Y%3D" draggable="false"></p></li></ul></div><ol class="flex-control-nav flex-control-paging"><li><a href="#" class="">1</a></li><li><a href="#" class="">2</a></li><li><a href="#" class="">3</a></li><li><a href="#" class="flex-active">4</a></li><li><a href="#">5</a></li><li><a href="#">6</a></li><li><a href="#">7</a></li><li><a href="#">8</a></li></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul><div class="flex-pauseplay"><a href="#" class="flex-pause">Pause</a></div></div>
+    </div>
+    <!-- 公司名称 -->
+    <div class="company-name" style="text-align: center;">
+        <h3>
+            <span id="comp-name">时装在此工厂店（示范）</span>
+            <a id="companyMap2" href="http://m.amap.com/navi/?dest=116.39875,39.862232&amp;destName=%E6%97%B6%E8%A3%85%E5%9C%A8%E6%AD%A4%E5%B7%A5%E5%8E%82%E5%BA%97%EF%BC%88%E7%A4%BA%E8%8C%83%EF%BC%89||地址：%E7%99%BE%E8%8D%A3%E4%B8%96%E8%B4%B8%E5%95%86%E5%9C%BAC%E5%BA%A7C%E5%8C%BA6%E6%A5%BC&amp;key=a52554d799aa1767da0c8f71d3ad6b0e">
+                <img id="companyMapIcon2" style="margin-left:5px;width:12px;height:14px" src="images/img_location_grey.gif">
+            </a>
+        </h3>
+        <p style="font-size: 0.8em;margin-top: 4px">工作时间：
+            <span id="bizHours">周一至周日9:00~21:00</span>
+        </p>
+    </div>
+
+    <div class="BreakingNewsController easing" id="news">
+        <div class="bn-title"></div>
+        <ul id="news-content"></ul>
+        <div class="bn-arrows"><span class="bn-close"></span></div>
+    </div>
+
+    <div style="height: 5px;"></div>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <ul class="tab-nav">
+            <li id="tab_t1" class="active">基础信息</li>
+            <li id="tab_t2" onclick="scrollOne(this)">主要经营</li>
+            <li id="tab_t3" onclick="scrollOne(this)">网友评价</li>
+        </ul>
+        <div class="tab-con company-intro" id="comp-info" style="display:block">
+            <div class="company-con">
+                <h4>经营范围</h4>
+                <pre style="white-space:pre-wrap; word-wrap:break-word;"><p id="businessScope">各种时装</p></pre>
+            </div>
+            <div style="height:1px;background:#e5e5e5;"></div>
+
+            <div class="company-con">
+                <h4>企业简介</h4>
+                <pre style="white-space:pre-wrap; word-wrap:break-word;"><p id="introduce">各种时装！品种多，</p></pre>
+            </div>
+            <div style="height:1px;background:#e5e5e5;"></div>
+
+            <div class="company-con">
+                <h4>联系电话</h4>
+                <a id="phone" href="tel:01052565656">
+                    <p>
+                        <span id="contactTel"><a href="tel: 01052565656">01052565656</a></span>
+                        <img style="margin-left:5px;width:13px;height:13px;vertical-align:middle;" src="images/phone.png">
+                    </p>
+                </a>
+            </div>
+
+            <div style="height:1px;background:#e5e5e5;"></div>
+
+            <div class="company-con">
+                <h4>经营地点</h4>
+                <a id="companyMap" href="http://m.amap.com/navi/?dest=116.39875,39.862232&amp;destName=%E6%97%B6%E8%A3%85%E5%9C%A8%E6%AD%A4%E5%B7%A5%E5%8E%82%E5%BA%97%EF%BC%88%E7%A4%BA%E8%8C%83%EF%BC%89||地址：%E7%99%BE%E8%8D%A3%E4%B8%96%E8%B4%B8%E5%95%86%E5%9C%BAC%E5%BA%A7C%E5%8C%BA6%E6%A5%BC&amp;key=a52554d799aa1767da0c8f71d3ad6b0e">
+                    <p>
+                        <span id="addressDetail">北京市东城区百荣世贸商场C座C区6楼</span>
+                        <img id="companyMapIcon" style="margin-left:5px;width:12px;height:14px;vertical-align:middle;" src="images/img_location_grey.png">
+                    </p>
+                </a>
+            </div>
+            <div style="height:1px;background:#e5e5e5;"></div>
+
+        </div>
+        <div class="tab-con" id="productList">
+            <div class="list_content"><div class="company-pro">  <a href="productDetails.html?productId=21">    <div class="img-container" style="background-image:url(http://docks.7shangjie.com/enterprise/1/product/21/1497273019325_8059294.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=gAe9d2Ws7ti6O7vAcoe4xzgTj38%3D)">    </div>    <div class="text-container">      <h4>巴黎时装</h4>      <div class="text_content">巴黎时装</div>    </div>  </a></div><div class="company-pro">  <a href="productDetails.html?productId=23">    <div class="img-container" style="background-image:url(http://docks.7shangjie.com/enterprise/1/product/23/1497272929679_1350642.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=2FpW7lrce0O/LVp4tuXoqtBwwTs%3D)">    </div>    <div class="text-container">      <h4>韩流</h4>      <div class="text_content">韩流</div>    </div>  </a></div></div>
+            <div class="list_foot" id="product_foot">
+                <div class="no-data" style="padding: 10px 0">——已经到底儿了——</div>
+            </div>
+        </div>
+        <div id="company-review" class="tab-con company-review">
+            <div class="list_content"><div class="review"> <div class="review-tit">     <div class="img-container">         <img src="http://docks.7shangjie.com/individual/201706/6/1498949957596_9584804?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=cMRQCWgqZnr1hk1eOlQgcvWhunA%3D" alt="">     </div>     <div class="review-con">         <div class="nickname">             <h4>繁花似锦绣</h4>             <div class="">2017-07-28 14:19:29</div>         </div>     <div class="user-con">         <div class="user-review">         <span class="deg"></span>         <span class="deg"></span>         <span class="deg"></span>         <span class="deg"></span>         <span class="deg"></span>         </div>         <div class="user-comment">店家不错</div>     </div>     </div> </div> <div class="review-con"> </div>     <div class="company-review-con">         <div class="review-tit company-tit">             <div class="img-container">                 <img src="http://docks.7shangjie.com/enterprise/1/profile/1500943202388_6382116.jpg?Expires=9223372036854775&amp;OSSAccessKeyId=LTAIqzh81aVTgmsQ&amp;Signature=l88Gm3t9clcgoq30mu5H40YTpg0%3D" alt="">             </div>             <div class="review-con">                 <div class="nickname">                     <h4>时装在此工厂店（示范）</h4>                     <div class="">2017-09-13 09:09:49</div>                 </div>         <div class="company-comment">回复：欢迎多来看看</div>             </div>         </div>     </div></div></div>
+            <div class="list_foot" id="comment_foot">
+                <div class="no-data" style="padding: 10px 0">——已经到底儿了——</div>
+            </div>
+        </div>
+        <div style="display: none">
+            <div id="loading">
+                <div class="no-data" style="padding: 10px 0">
+                    <img src="images/loading.gif">
+                </div>
+            </div>
+            <div id="load-end">
+                <div class="no-data" style="padding: 10px 0">——已经到底儿了——</div>
+            </div>
+            <div id="load-err">
+                <div class="no-data" style="padding: 10px 0">
+                    <div class="reload-button" onclick="loadData(this)">——数据加载失败——</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a id="totop" href="#body" class="btn-backtotop" style="display: inline-block;"></a>
+
+<!-- 下载提示 -->
+<div class="download-tip" style="display: block;">
+    <div class="down-bg"></div>
+    <div class="down-con">
+        <div class="down-logo">
+            <img style="width:100%;" src="images/app_icon.png" alt="">
+        </div>
+        <div class="down-text">
+            <p class="fore1">且逛在手, 掌握周边</p>
+            <p class="fore1">欢迎体验"且逛周边"应用</p>
+        </div>
+        <div class="close-btn">
+            <img src="images/close_down.png" alt="">
+        </div>
+        <div class="download">
+<!--            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.rt.ylhy">下载APP</a>-->
+            <a href="ylhy://company/attr?id=35">下载APP</a>
+        </div>
+    </div>
+</div>
+<!-- js files -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/BreakingNews.js"></script>
+<script src="/resources/layer/layer.js"></script>
+<script src="/resources/layer/extend/layer.ext.js"></script>
+<script type="text/javascript">
+        var hasNews = false;
+        //针对手机兼容性页面隐藏，手机端点击后退按钮后不刷新，只能强行初始化
+        var hiddenProperty = 'hidden' in document ? 'hidden' :
+            'webkitHidden' in document ? 'webkitHidden' :
+                'mozHidden' in document ? 'mozHidden' :
+                    null;
+        var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+        var onVisibilityChange = function(){
+            if (!document[hiddenProperty] && hasNews) {
+                $('#news').BreakingNews({
+                    title: '',
+                    background: '#d2ceb5',
+                    titlepadding:35,
+                    linkcolor: '#ee6b11',
+                    linkhovercolor: '#ee6b11',
+                    timer: 2000,
+                    fonttextsize:14,
+                    effect: 'slide'
+                });
+            }
+        }
+        document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+
+        var slides;
+        var companyId = parseInt(getQueryString("companyId"));
+        var companyImg = './images/company.png';
+        var companyName = '';
+        var currentSlide = 0;
+        var s;
+        layer.load();
+
+        var pPage = 1;
+        var cPage = 1;
+        var cMore = true;
+        var pMore = true;
+        var cLoading = false;
+        var pLoading = false;
+
+        var cInit = false;
+        var pInit = false;
+        function scrollOne (item) {
+            //显示产品列表
+            if ($(item).attr("id") === 'tab_t2' && !pInit) {
+                pInit = true;
+                //loadProductList();
+            } else if ($(item).attr("id") === "tab_t3" && !cInit) {
+                cInit = true;
+                //loadCommentList();
+            }
+        }
+
+        $(".BreakingNewsController .bn-close").click(function () {
+           $("#news").remove();
+        });
+
+
+        $(window).scroll(function(){
+            var scrollTop = $(this).scrollTop();
+            var scrollHeight = $(document).height();
+            var windowHeight = $(this).height();
+            if(scrollTop + windowHeight >= scrollHeight - 20){
+                //显示产品列表
+                if ("block" === $("#productList").css("display")) {
+                    loadProductList();
+                }
+                if ("block" === $("#company-review").css("display")) {
+                    loadCommentList();
+                }
+            }
+            //滚动监听
+            if($(".banner").height() < scrollTop) {
+                $("#totop").show(1000);
+            } else {
+                $("#totop").hide(1000);
+            }
+        });
+
+        // 企业信息
+        $.post('/app/page/companyInfo', {
+                "companyId": companyId
+            },
+            function (result) {
+                layer.closeAll();
+                if (result.operationState == "SUCCESS") {
+                    //loadData();
+                    var companyInfo = result.data.company;
+                    companyName = companyInfo.nickName;
+                    companyImg = result.data.company.headUrl;
+                    if (null != result.data.imgs) {
+                        var html = [];
+                        var bigHtml = [];
+                        $.each(result.data.imgs, function (n, value) {
+                            html.push('<li class="s2" data-index="'+n+'">');
+                            html.push('<p class="image-container"> <img src="' + value + '"/></p>');
+                            html.push('</li>');
+                        });
+                        $("#slides").html(html.join(''));
+                        $("#big-img-slides").html(bigHtml.join(''));
+
+                        function s1() {
+                            s = $(".s1").flexslider({
+                                animation: "slide",
+                                slideshowSpeed: "2000",
+                                pauseOnAction: false,
+                                selector: ".slides > li",
+                                slideToStart: currentSlide,
+                                pausePlay: true,
+                                slideshow: true,
+                                after: function (e) {
+                                    currentSlide = e.currentSlide;
+                                    console.log(currentSlide);
+                                    if ($(".flex-play").html() == "Play") {
+                                        console.log("Play is clicked");
+                                        $(".flex-play").click();
+                                    }
+
+                                }
+                            });
+                            $(".s2").click(function (event) {
+                                console.log("s2");
+                                if ($(".flex-play").html() == "Play") {
+                                    console.log("Play is clicked");
+                                    $(".flex-play").click();
+                                }
+                            });
+
+                        }
+
+                        s1();
+                        alertBanner();
+                        setTimeout(function () {
+                            $(".s1").css({
+                                'background': 'url("images/bg.jpg") center center no-repeat',
+                                'background-size': 'cover'
+                            });
+                        }, 50);
+                    }
+
+                    //企业资讯列表
+                    var list = result.data.news;
+                    var msgList = $("#news-content");
+                    hasNews = list && list.length > 0;
+                    if (hasNews) {
+                        for (var i = 0; i < list.length; i++) {
+                            var title = renderTitle(list[i].newsType);
+                            msgList.append("<li><a href=\"news.html?newsId=" + list[i].id + "\">" + title + list[i].title + "</a></li>");
+                        }
+                    }
+
+                    var contactTelHTML = "<a href='tel: " + companyInfo.phone + "'>" + companyInfo.phone + "</a>";
+                    $("#phone").attr("href", 'tel:' + companyInfo.phone);
+                    $("title").append(companyInfo.nickName);
+                    $(".company-name h3 #comp-name").append(companyInfo.nickName);
+                    $("#businessScope").append(companyInfo.businessScope);
+                    $("#introduce").append(companyInfo.introduce);
+                    $("#contactTel").append(contactTelHTML);
+                    $("#addressDetail").append(companyInfo.city + companyInfo.area + companyInfo.address);
+                    $("#bizHours").append(companyInfo.bizHours);
+
+                    $(".outer-container").show();
+
+                    var mapurl = "http://m.amap.com/navi/?dest=" + companyInfo.longtitude + "," + companyInfo.latitude +
+                        "&destName=" + encodeURI(companyInfo.nickName) + "||地址：" + encodeURI(companyInfo.address) +
+                        "&key=a52554d799aa1767da0c8f71d3ad6b0e";
+                    $("#companyMap").attr("href", mapurl);
+                    $("#companyMap2").attr("href", mapurl);
+                    if (GetQueryString("inApp") == 1) {
+                        /*$("#companyMapIcon").hide();
+                        $("#companyMapIcon2").hide();
+                        $("#companyMap").removeAttr('href');*/
+                    }else if (GetQueryString("inApp") == 2) {
+                        $("#companyMapIcon").hide();
+                        $("#companyMapIcon2").hide();
+                        $("#companyMap").removeAttr('href');
+                    }
+                    if(hasNews) {
+                        $('#news').show().BreakingNews({
+                            title: '',
+                            background: '#d2ceb5',
+                            titlepadding:35,
+                            linkcolor: '#ee6b11',
+                            linkhovercolor: '#ee6b11',
+                            timer: 2000,
+                            fonttextsize:14,
+                            effect: 'slide'
+                        });
+                    }
+                } else {
+                    //alert(result.data.reason);
+                    $("#on-error-title").html(result.data.reason);
+                    $(".on-error").show();
+                    $(".outer-container").empty();
+                    $(".btn-backtotop").hide();
+                    document.title = result.data.reason;
+                }
+            }, 'json');
+
+        function loadProductList() {
+            if (!pMore || pLoading) {
+                return false;
+            }
+            pLoading = true;
+
+            //加载中
+            $('#productList .list_foot').html($("#loading").html());
+
+            // 产品列表
+            $.ajax({
+                url : '/app/page/productList',
+                data: {
+                    "companyId": companyId,
+                    "page" : pPage,
+                    "pageSize": 6
+                },
+                type: "post",
+                dataType: 'json',
+                success: function (result) {
+                    //加载中
+                    $('#productList .list_foot').empty();
+                    pLoading = false;
+
+                    if (result.operationState == "SUCCESS") {
+                        var productList = result.data.pager.entities;
+                        var divs = [];
+                        if (result.data.pager.entities.length == 0 && pPage == 1) {
+                            $('#productList .list_foot').html("<div class=\"no-data\">暂无品类明细</div>");
+                            pMore = false;
+                            return;
+                        }
+                        $.each(productList, function (n, value) {
+                            var productImg = '';
+                            var substrDescri = '';
+                            if (null != value.imageInfos && value.imageInfos.length > 0) {
+                                productImg = value.imageInfos[0].url;
+
+                            } else {
+                                productImg = './images/product-default.png';
+                            }
+                            if (null == value.description) {
+                                substrDescri = '';
+                            } else if (value.description.length <= 80) {
+                                substrDescri = value.description;
+                            } else {
+                                substrDescri = value.description.substring(0, 80) + '...';
+                            }
+
+                            divs.push('<div class="company-pro">');
+                            divs.push('  <a href="productDetails.html?productId=' + value.id + '">');
+                            divs.push('    <div class="img-container"  style="background-image:url(' +
+                                productImg + ')">');
+                            divs.push('    </div>');
+                            divs.push('    <div class="text-container">');
+                            divs.push('      <h4>' + value.name + '</h4>');
+                            divs.push('      <div class="text_content">' + substrDescri + '</div>');
+                            divs.push('    </div>');
+                            divs.push('  </a>');
+                            divs.push('</div>');
+
+                        });
+
+                        if (result.data.pager.entities.length < 6) {
+                            pMore = false;
+                            $('#productList .list_foot').html($("#load-end").html());
+                        }
+                        if (divs.length > 0) {
+                            if (pPage == 1) {
+                                $('#productList .list_content').empty();
+                            }
+                            $('#productList .list_content').append(divs.join(''));
+                            pPage += 1;
+                        }
+                        if (result.data.pager.entities.length > 4) {
+                            $("#tab_t2").addClass("active");
+                            $("#tab_t1").removeClass("active");
+                            $("#productList").css("display", "block");
+                            $("#comp-info").css("display", "none");
+                        }
+                    } else {
+                        alert(result.data.reason);
+                        pLoading = false;
+                        onErr($('#productList .list_foot'));
+                    }
+                },
+                error: function () {
+                    pLoading = false;
+                    onErr($('#productList .list_foot'));
+                }
+            });
+        }
+
+        function loadCommentList() {
+            if (!cMore || cLoading) {
+                return false;
+            }
+            cLoading = true;
+            //加载中
+            $('#company-review .list_foot').html($("#loading").html());
+
+            // 评论列表
+            $.ajax({
+                url : '/app/page/commentList',
+                data: {
+                    "companyId": companyId,
+                    "page" : cPage,
+                    "pageSize": 6
+                },
+                type: "post",
+                dataType: 'json',
+                success: function (result) {
+                    $('#company-review .list_foot').empty();
+                    cLoading = false;
+                    if (result.operationState == "SUCCESS") {
+                        var html = [];
+                        if (result.data == null || result.data.pager.entities.length === 0 || result.data.pager == null || result.data.pager.count == 0) {
+                            if(cPage == 1) {
+                                $("#company-review .list_content").html('<div class="no-data">暂无评论记录</div>');
+                                cMore = false;
+                                return
+                            }
+                        }
+                        $.each(result.data.pager.entities, function () {
+                            var headImgPath = this.headImgPath;
+                            if (!headImgPath) {
+                                headImgPath = "./images/person.png";
+                            }
+                            html.push('<div class="review">');
+                            html.push(' <div class="review-tit">');
+                            html.push('     <div class="img-container">');
+                            html.push('         <img src="' + headImgPath + '" alt="">');
+                            html.push('     </div>');
+                            html.push('     <div class="review-con">');
+                            // html.push('        <div class="divider"></div>');
+                            html.push('         <div class="nickname">');
+                            html.push('             <h4>' + this.userName + '</h4>');
+                            html.push('             <div class="">' + this.msg.createTime + '</div>');
+                            html.push('         </div>');
+                            html.push('     <div class="user-con">');
+                            html.push('         <div class="user-review">');
+                            // 评论星星
+                            for (var i = 0; i < this.msg.stars; i++) {
+                                html.push('         <span class="deg"></span>');
+                            }
+
+                            html.push('         </div>');
+                            html.push('         <div class="user-comment">' + this.msg.content + '</div>');
+                            html.push('     </div>');
+                            html.push('     </div>');
+                            html.push(' </div>');
+                            html.push(' <div class="review-con">');
+                            html.push(' </div>');
+                            // 公司回复
+                            if (null != this.msg.reply) {
+                                html.push('     <div class="company-review-con">');
+                                html.push('         <div class="review-tit company-tit">');
+                                html.push('             <div class="img-container">');
+                                html.push('                 <img src="' + companyImg + '" alt="">');
+                                html.push('             </div>');
+                                html.push('             <div class="review-con">');
+                                html.push('                 <div class="nickname">');
+                                html.push('                     <h4>' + companyName + '</h4>');
+                                html.push('                     <div class="">' + this.msg.replyTime + '</div>');
+                                html.push('                 </div>');
+                                html.push('         <div class="company-comment">' + ((null == this.msg.reply) ?
+                                    '' : "回复：" + this.msg.reply) + '</div>');
+                                html.push('             </div>');
+                                html.push('         </div>');
+
+                                html.push('     </div>');
+                            }
+                            html.push('</div>');
+
+                        });
+                        if (result.data.pager.entities.length < 6) {
+                            cMore = false;
+                            $('#company-review .list_foot').html($("#load-end").html());
+                        }
+                        if (html.length > 0) {
+                            if (cPage == 1) {
+                                $('#company-review .list_content').empty();
+                            }
+                            $("#company-review .list_content").append(html.join(''));
+                            cPage += 1;
+                        }
+                    } else {
+                        alert(result.data.reason);
+                        cLoading = false;
+                        onErr($('#company-review .list_foot'));
+                    }
+                },
+                error: function () {
+                    cLoading = false;
+                    onErr($('#company-review .list_foot'));
+                }
+            });
+        }
+        loadProductList();
+        loadCommentList();
+
+        /**
+         * 加载失败
+         * @param foot
+         */
+        function onErr (foot) {
+            foot.empty();
+            foot.html($("#load-err").html());
+        }
+
+        function loadData(ele) {
+            var pNodeId = $(ele).parent().parent().attr("id");
+            //$(ele).parent().parent().empty();
+            //comment
+            if(pNodeId === 'comment_foot') {
+                loadCommentList();
+            } else {
+                loadProductList();
+            }
+        }
+
+        function renderTitle(type) {
+            if("TONGZHI" === type) {
+                return "通知：";
+            } else if("HUODONG" === type) {
+                return "活动：";
+            } else {
+                return "最新消息：";
+            }
+        }
+
+    </script>
+
+
+
+
+
+<audio controls="controls" style="display: none;"></audio></body><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></html>

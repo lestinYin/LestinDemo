@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,30 +7,33 @@
     tools:context="com.yin.lestin.lestindemo.ui.activity.MainActivity">
 
 
-    <com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout
-        android:id="@+id/swipeRefreshLayout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
 
-        <com.scu.miomin.shswiperefresh.view.SHListView
-            android:id="@+id/lv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout>
     <RelativeLayout
+        android:id="@+id/rl_bottom"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/colorPrimary"
+        android:layout_margin="20dp"
+        android:background="@drawable/my_rect"
+        android:elevation="0.4dp"
+        android:stateListAnimator="@drawable/selector_elevation"
         >
+
         <View
             android:id="@+id/view"
             android:layout_width="8dp"
             android:layout_height="8dp"
-            android:background="@color/colorAccent"
             android:layout_centerInParent="true"
+            android:background="@color/colorAccent"
+            android:layout_margin="@dimen/dp_4"
             />
 
     </RelativeLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

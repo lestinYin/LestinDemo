@@ -2,28 +2,33 @@ package com.yin.lestin.lestindemo.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.RelativeLayout;
 
-import com.scu.miomin.shswiperefresh.core.SHSwipeRefreshLayout;
-import com.scu.miomin.shswiperefresh.view.SHListView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
+import com.pensees.secret.JNITest;
 import com.yin.lestin.lestindemo.R;
-import com.yin.lestin.lestindemo.ui.adapter.SimpleLvAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author lestin
+ */
 public class MainActivity extends AppCompatActivity {
-    // 合并
+    /**合并*/
     private List<String> mDatas;
-    private SHSwipeRefreshLayout swipeRefreshLayout;
     private View view;
-    private SHListView lv;
+    private RecyclerView lv;
+    private RelativeLayout mBottom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,23 +36,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initData();
         initLv();
-        initSwipeRefreshLayout();
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-                        startActivity(new Intent(getApplicationContext(),AShowImage.class));
-                        break;
-                    case 1:
-                        startActivity(new Intent(getApplicationContext(),ARequestNet.class));
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
 
+        int i = JNITest.secreateIsOk();
+        Log.e("----",String.valueOf(i));
     }
 
     public static void startActivity(Context context) {
@@ -56,86 +47,64 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initLv() {
-        lv = (SHListView) findViewById(R.id.lv);
-        view =  findViewById(R.id.view);
-        lv.setAdapter(new SimpleLvAdapter(this,mDatas));
+        lv = (RecyclerView) findViewById(R.id.lv);
+        mBottom =  findViewById(R.id.rl_bottom);
+        view = findViewById(R.id.view);
+        LvAdapter lvAdapter = new LvAdapter(R.layout.simple_item, mDatas);
+        lv.setAdapter(lvAdapter);
 
-        view.setTranslationX(500F);
-        view.setAlpha(0.3F);
+
+
+
     }
 
-    private void initSwipeRefreshLayout() {
-        swipeRefreshLayout = (SHSwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
-        LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
-        final View view = inflater.inflate(R.layout.refresh_view, null);
-        final TextView textView = (TextView) view.findViewById(R.id.title);
+    public class LvAdapter extends BaseQuickAdapter<String, BaseViewHolder> implements BaseQuickAdapter.OnItemClickListener {
 
-        swipeRefreshLayout.setFooterView(view);
-        swipeRefreshLayout.setOnRefreshListener(new SHSwipeRefreshLayout.SHSOnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                swipeRefreshLayout.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        swipeRefreshLayout.finishRefresh();
-                        Toast.makeText(MainActivity.this, "刷新完成", Toast.LENGTH_SHORT).show();
-                    }
-                }, 1600);
-            }
+        public LvAdapter(int layoutResId, @Nullable List<String> data) {
+            super(layoutResId, data);
+            setOnItemClickListener(this);
+        }
 
-            @Override
-            public void onLoading() {
-                swipeRefreshLayout.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        swipeRefreshLayout.finishLoadmore();
-                        lv.setEnabled(true);
-                        Toast.makeText(MainActivity.this, "加载完成", Toast.LENGTH_SHORT).show();
-                    }
-                }, 1600);
-            }
+        @Override
+        protected void convert(@NonNull BaseViewHolder helper, String item) {
+            helper.setText(R.id.id_num, item);
 
-            /**
-             * 监听下拉刷新过程中的状态改变
-             * @param percent 当前下拉距离的百分比（0-1）
-             * @param state 分三种状态{NOT_OVER_TRIGGER_POINT：还未到触发下拉刷新的距离；OVER_TRIGGER_POINT：已经到触发下拉刷新的距离；START：正在下拉刷新}
-             */
-            @Override
-            public void onRefreshPulStateChange(float percent, int state) {
-                switch (state) {
-                    case SHSwipeRefreshLayout.NOT_OVER_TRIGGER_POINT:
-                        swipeRefreshLayout.setRefreshViewText("下拉刷新");
-                        break;
-                    case SHSwipeRefreshLayout.OVER_TRIGGER_POINT:
-                        swipeRefreshLayout.setRefreshViewText("松开刷新");
-                        break;
-                    case SHSwipeRefreshLayout.START:
-                        swipeRefreshLayout.setRefreshViewText("正在刷新");
-                        break;
-                }
-            }
+        }
 
-            @Override
-            public void onLoadmorePullStateChange(float percent, int state) {
-                switch (state) {
-                    case SHSwipeRefreshLayout.NOT_OVER_TRIGGER_POINT:
-                        textView.setText("上拉加载");
-                        break;
-                    case SHSwipeRefreshLayout.OVER_TRIGGER_POINT:
-                        textView.setText("松开加载");
-                        break;
-                    case SHSwipeRefreshLayout.START:
-                        lv.setEnabled(false);
-                        textView.setText("正在加载...");
-                        break;
-                }
+        @Override
+        public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+            switch (position) {
+                case 0:
+                    startActivity(new Intent(getApplicationContext(), AShowImage.class));
+//                    startActivity(new Intent(getApplicationContext(), AWebView.class).putExtra("url", "http://tyhqadcw.qdingnet.com/qdp-data-center-webui/#/data-center/dashboard"));
+                    break;
+                case 1:
+                    startActivity(new Intent(getApplicationContext(), ARequestNet.class));
+                    break;
+                case 2:
+                    startActivity(new Intent(getApplicationContext(), AWebView.class).putExtra("url", "https://mp.weixin.qq.com/s?__biz=MzA5MzI3NjE2MA==&mid=2650248230&idx=1&sn=b1ed5b205fcd2745e040a2b14d4c2a0f&chksm=88636549bf14ec5f54530fa2c2bd3c4c44fab4512126230aff8f46f17679ed36d6e44ff08a60&scene=27#wechat_redirect"));
+//                    startActivity(new Intent(getApplicationContext(), AWebView.class).putExtra("url", "http://tyhqadcw.qdingnet.com/qdp-data-center-webui/#/data-center/dashboard"));
+                    break;
+                case 3:
+                    startActivity(new Intent(getApplicationContext(), AWechat.class));
+                    break;
+                case 4:
+                    startActivity(new Intent(getApplicationContext(), AIm.class));
+                    break;
+                default:
+                    break;
             }
-        });
+        }
     }
+
 
     protected void initData() {
         mDatas = new ArrayList();
         mDatas.add("显示图片");
         mDatas.add("网络请求");
+        mDatas.add("webView");
+        mDatas.add("微信公众号");
+        mDatas.add("WebJs");
     }
+
 }
