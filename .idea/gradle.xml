@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -10,15 +13,21 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Common-Lib/IM/IMKit" />
             <option value="$PROJECT_DIR$/Common-Lib/IM/IMLib" />
+            <option value="$PROJECT_DIR$/PesEmotion2" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/appEmotion" />
+            <option value="$PROJECT_DIR$/camera2" />
             <option value="$PROJECT_DIR$/game" />
             <option value="$PROJECT_DIR$/im" />
             <option value="$PROJECT_DIR$/login" />
+            <option value="$PROJECT_DIR$/pensees" />
+            <option value="$PROJECT_DIR$/yin" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="testRunner" value="PLATFORM" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
+    <option name="offlineMode" value="true" />
   </component>
 </project>

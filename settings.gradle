@@ -1,4 +1,4 @@
-include ':app', ':im', ':IMKit', ':IMLib', ':login', ':game'
+include ':app', ':im', ':IMKit', ':IMLib', ':login', ':game', ':yin', ':pensees', ':appEmotion', ':PesEmotion2'
 setBinding(new Binding([gradle: this]))
 
 //lib 放在文件下 引用找不到 需要配置路径
@@ -6,3 +6,4 @@ project(':IMLib').projectDir = new File('Common-lib/IM/IMLib')
 project(':IMKit').projectDir = new File('Common-lib/IM/IMKit')
 
 
+include ':camera2'

@@ -1,0 +1,120 @@
+apply plugin: 'com.android.library'
+//各模块中kotlin文件可以相互调用
+apply plugin: 'kotlin-android'
+//减少findviewbyid
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.alibaba.arouter'
+
+apply plugin: 'kotlin-kapt'
+
+
+apply from: "${rootProject.rootDir}/config.gradle"
+
+android {
+    compileSdkVersion project.ext.compileSdkVersion
+    buildToolsVersion project.ext.buildToolsVersion
+
+
+    defaultConfig {
+//        applicationId "com.jinniu.login"
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.compileSdkVersion
+        versionCode project.ext.versionCode
+        versionName project.ext.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+//        kapt {
+//            arguments {
+//                arg("AROUTER_MODULE_NAME", project.getName())
+//            }
+//        }
+        defaultConfig {
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments = [AROUTER_MODULE_NAME: project.getName()]
+                }
+            }
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "isReleaseEnv", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField "boolean", "isReleaseEnv", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    //noinspection GradleCompatible
+    api 'com.android.support:appcompat-v7:26.1.0'
+    api 'com.android.support:design:26.1.0'
+    api 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //gson
+    api 'com.google.code.gson:gson:2.8.5'
+    // 网络请求库
+    api project.ext.networkLibs
+    // RxJava2
+    api project.ext.rxJavaLibs
+    //状态栏
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //glide
+//    implementation ("com.github.bumptech.glide:glide:4.9.0") {
+//        exclude group: 'com.android.support'
+//    }
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'androidx.annotation:annotation:1.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //eventbus
+    api 'org.greenrobot:eventbus:3.1.1'
+    //recyclerView common Adapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    //zhy commonAdapter
+    api 'com.zhy:base-rvadapter:3.0.3'
+    //facebook test
+    api 'com.facebook.stetho:stetho:1.5.0'
+
+
+    // 替换成最新版本, 需要注意的是api
+    // 要与compiler匹配使用，均使用最新版可以保证兼容
+    api ("com.alibaba:arouter-api:1.5.0") {
+        exclude module: 'support-v4'
+    }
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    kapt 'com.alibaba:arouter-annotation:1.0.6'
+    //下拉刷新 https://github.com/scwang90/SmartRefreshLayout
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    //轮播图
+    api 'com.jude:rollviewpager:1.4.6'
+    //request permission
+    api ("com.github.tbruyelle:rxpermissions:0.10.2"){
+        exclude group: 'com.android.support'
+    }
+//    implementation 'com.android.support:swiperefreshlayout:26.1.0'
+
+    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0"
+
+
+}

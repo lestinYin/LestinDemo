@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".face.activity.FaceVerifyActivity"
+    tools:ignore="MissingConstraints">
+
+
+
+    <ai.pensees.view.FaceCameraViewLite
+        android:id="@+id/view_camera"
+        app:camera_index="0"
+        app:show_mirror="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.pensees.guard.utils.FaceRectView
+        android:id="@+id/face_rect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#50000000"
+        >
+
+        <ImageView
+            android:id="@+id/iv_smile"
+            android:layout_width="@dimen/size_4_comm_108"
+            android:layout_height="@dimen/size_4_comm_108"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@mipmap/smile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="@dimen/size_4_comm_108"
+            />
+        <TextView
+            android:id="@+id/tv_smile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="0"
+            android:textSize="70sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_smile"
+            android:layout_marginLeft="@dimen/size_4_comm_108"
+            />
+        <Button
+            android:id="@+id/bt_clean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清空"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/size_4_comm_16"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/blurry_background"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@mipmap/smile"
+        />
+    <TextView
+        android:id="@+id/tv_emotion_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintLeft_toLeftOf="@id/blurry_background"
+        android:textSize="@dimen/text_30sp"
+        android:textColor="#000000"
+        />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/icon_invitation_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/size_4_comm_16"
+        />
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

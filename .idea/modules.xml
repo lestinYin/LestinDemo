@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Common-Lib/IM/IMKit/IMKit.iml" filepath="$PROJECT_DIR$/Common-Lib/IM/IMKit/IMKit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Common-Lib/IM/IMLib/IMLib.iml" filepath="$PROJECT_DIR$/Common-Lib/IM/IMLib/IMLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LestinDemo.iml" filepath="$PROJECT_DIR$/.idea/LestinDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/game/game.iml" filepath="$PROJECT_DIR$/game/game.iml" />
-      <module fileurl="file://$PROJECT_DIR$/im/im.iml" filepath="$PROJECT_DIR$/im/im.iml" />
-      <module fileurl="file://$PROJECT_DIR$/login/login.iml" filepath="$PROJECT_DIR$/login/login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Common-Lib/IM/IMKit/LestinDemo.IMKit.iml" filepath="$PROJECT_DIR$/.idea/modules/Common-Lib/IM/IMKit/LestinDemo.IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Common-Lib/IM/IMLib/LestinDemo.IMLib.iml" filepath="$PROJECT_DIR$/.idea/modules/Common-Lib/IM/IMLib/LestinDemo.IMLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PesEmotion2/LestinDemo.PesEmotion2.iml" filepath="$PROJECT_DIR$/.idea/modules/PesEmotion2/LestinDemo.PesEmotion2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LestinDemo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LestinDemo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appEmotion/LestinDemo.appEmotion.iml" filepath="$PROJECT_DIR$/.idea/modules/appEmotion/LestinDemo.appEmotion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/camera2/LestinDemo.camera2.iml" filepath="$PROJECT_DIR$/.idea/modules/camera2/LestinDemo.camera2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/game/LestinDemo.game.iml" filepath="$PROJECT_DIR$/.idea/modules/game/LestinDemo.game.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/im/LestinDemo.im.iml" filepath="$PROJECT_DIR$/.idea/modules/im/LestinDemo.im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/login/LestinDemo.login.iml" filepath="$PROJECT_DIR$/.idea/modules/login/LestinDemo.login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pensees/LestinDemo.pensees.iml" filepath="$PROJECT_DIR$/.idea/modules/pensees/LestinDemo.pensees.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/yin/LestinDemo.yin.iml" filepath="$PROJECT_DIR$/.idea/modules/yin/LestinDemo.yin.iml" />
     </modules>
   </component>
 </project>

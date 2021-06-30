@@ -1,0 +1,154 @@
+<resources>
+
+
+    <!-- ########### 主体框架的高度(必须是4的倍数) ########### -->
+    <!--官方推荐的留白间距-小(用于listView各个item间距)-->
+    <dimen name="size_4_comm_4">4dp</dimen>
+    <!--官方推荐的留白间距-大（用于图片控件与其他控件间距）-->
+    <dimen name="size_4_comm_8">8dp</dimen>
+    <!--官方推荐的留白间距-超大（用于页面边距）-->
+    <dimen name="size_4_comm_16">16dp</dimen>
+    <!--谷歌官方推荐的可触摸控件的最小高为48dp-->
+    <!--谷歌官方推荐的可触摸控件的一般高为64dp-->
+
+    <dimen name="size_4_comm_72">72dp</dimen>
+
+    <dimen name="text_size_75sp_L">75sp</dimen>
+
+    <!-- ########### 字体大小 ########### -->
+    <!-- 小字体 -->
+    <!-- 一般正文 -->
+    <!-- 小标题 -->
+    <dimen name="text_size_16sp_L">16sp</dimen>
+    <!-- 大标题 -->
+    <dimen name="text_size_18sp_XL">18sp</dimen>
+    <!-- 超大标题 -->
+    <dimen name="text_size_28sp_XL">28sp</dimen>
+
+    <dimen name="pad_text_size_22sp_S">22sp</dimen>
+    <dimen name="pad_text_size_24sp_M">24sp</dimen>
+    <dimen name="pad_text_size_27sp_L">30sp</dimen>
+    <dimen name="pad_text_size_30sp_L">30sp</dimen>
+    <dimen name="pad_text_size_38sp_XL">38sp</dimen>
+
+    <dimen name="radius_corner_size_12dp">12dp</dimen>
+
+
+    <dimen name="view_size_4_title_bar_height">75.94dp</dimen>
+    <dimen name="view_size_4_title_bar_text">23sp</dimen>
+
+
+    <dimen name="text_11sp">11sp</dimen>
+    <dimen name="text_12sp">12sp</dimen>
+    <dimen name="text_14sp">14sp</dimen>
+    <dimen name="text_15sp">15sp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="text_17sp">17sp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+    <dimen name="text_20sp">20sp</dimen>
+    <dimen name="text_21sp">21sp</dimen>
+    <dimen name="text_22sp">22sp</dimen>
+    <dimen name="text_23sp">23sp</dimen>
+    <dimen name="text_24sp">24sp</dimen>
+    <dimen name="text_25sp">25sp</dimen>
+    <dimen name="text_26sp">26sp</dimen>
+    <dimen name="text_30sp">30sp</dimen>
+    <dimen name="text_33sp">33sp</dimen>
+
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_11dp">11dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_13dp">13dp</dimen>
+    <dimen name="margin_14dp">14dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_17dp">17dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="margin_19dp">19dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_21dp">21dp</dimen>
+    <dimen name="margin_23dp">23dp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+    <dimen name="margin_25dp">25dp</dimen>
+    <dimen name="margin_26dp">26dp</dimen>
+    <dimen name="margin_28dp">28dp</dimen>
+    <dimen name="margin_29dp">29dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="margin_33dp">33dp</dimen>
+    <dimen name="margin_36dp">36dp</dimen>
+    <dimen name="margin_38dp">38dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_42dp">42dp</dimen>
+    <dimen name="margin_45dp">45dp</dimen>
+    <dimen name="margin_47dp">47dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_55dp">55dp</dimen>
+    <dimen name="margin_58dp">58dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="margin_61dp">61dp</dimen>
+    <dimen name="margin_62dp">62dp</dimen>
+    <dimen name="margin_65dp">65dp</dimen>
+    <dimen name="margin_70dp">70dp</dimen>
+    <dimen name="margin_75dp">75dp</dimen>
+    <dimen name="margin_77dp">77dp</dimen>
+    <dimen name="margin_80dp">80dp</dimen>
+    <dimen name="margin_113dp">113dp</dimen>
+    <dimen name="margin_negative_14dp">-14dp</dimen>
+    <dimen name="margin_negative_20dp">-20dp</dimen>
+    <dimen name="margin_negative_25dp">-25dp</dimen>
+    <dimen name="edit_view_height">33dp</dimen>
+    <dimen name="button_height">38dp</dimen>
+    <dimen name="button_width">105dp</dimen>
+    <dimen name="input_text_view_width">86dp</dimen>
+    <dimen name="input_text_view_height">48dp</dimen>
+    <dimen name="edit_text_width">274dp</dimen>
+    <dimen name="edit_text_height">38dp</dimen>
+    <dimen name="setting_margin_top">74dp</dimen>
+    <dimen name="image_width">100dp</dimen>
+    <dimen name="image_height">138dp</dimen>
+
+
+    <dimen name="size_4_comm_88">88dp</dimen>
+
+    <dimen name="size_4_comm_108">108dp</dimen>
+    <dimen name="size_4_comm_116">116dp</dimen>
+    <dimen name="size_4_comm_120">120dp</dimen>
+    <dimen name="size_4_comm_128">128dp</dimen>
+    <dimen name="size_4_comm_130">130dp</dimen>
+    <dimen name="size_4_comm_138">138dp</dimen>
+    <dimen name="size_4_comm_140">140dp</dimen>
+    <dimen name="size_4_comm_148">148dp</dimen>
+    <dimen name="size_4_comm_150">150dp</dimen>
+    <dimen name="size_4_comm_152">152dp</dimen>
+    <dimen name="size_4_comm_154">154dp</dimen>
+    <dimen name="size_4_comm_158">158dp</dimen>
+    <dimen name="size_4_comm_159">159dp</dimen>
+    <dimen name="size_4_comm_160">160dp</dimen>
+    <dimen name="size_4_comm_162">162dp</dimen>
+    <dimen name="size_4_comm_168">168dp</dimen>
+    <dimen name="size_4_comm_170">170dp</dimen>
+    <dimen name="size_4_comm_176">176dp</dimen>
+    <dimen name="size_4_comm_180">180dp</dimen>
+    <dimen name="size_4_comm_185">185dp</dimen>
+    <dimen name="size_4_comm_192">192dp</dimen>
+    <dimen name="size_4_comm_200">200dp</dimen>
+    <dimen name="size_4_comm_240">240dp</dimen>
+    <dimen name="size_4_comm_380">380dp</dimen>
+    <dimen name="size_4_comm_420">420dp</dimen>
+    <dimen name="size_4_comm_480">480dp</dimen>
+    <dimen name="size_4_comm_520">520dp</dimen>
+    <dimen name="size_4_comm_530">530dp</dimen>
+
+    <dimen name="size_preview_button_padding_top">5.2dp</dimen>
+    <dimen name="size_preview_button_padding_left">7.5dp</dimen>
+    <dimen name="size_preview_button_padding_bottom">9.8dp</dimen>
+    <dimen name="size_preview_button_padding_right">7.5dp</dimen>
+    <dimen name="user_input_magintop">25dp</dimen>
+
+
+</resources>

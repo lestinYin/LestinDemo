@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_store_list_pic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:background="@mipmap/store_list_pic"
+        />
+    <TextView
+        android:id="@+id/tv_store_list_dish_name"
+        android:layout_below="@id/iv_store_list_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="宫保鸡丁套餐预想你的想你的想你的想"
+        android:layout_alignEnd="@id/iv_store_list_pic"
+        android:textColor="@color/color_333333"
+        android:textSize="10sp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/tv_store_list_dish_price"
+        android:layout_below="@id/tv_store_list_dish_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19.9"
+        android:textColor="@color/color_d10404"
+        android:textSize="15sp"
+        android:drawableLeft="@mipmap/meijin"
+        />
+    <TextView
+        android:id="@+id/tv_tv_store_list_dish_price_former"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40"
+        android:textColor="@color/color_999999"
+        android:textSize="10sp"
+        android:layout_toRightOf="@id/tv_store_list_dish_price"
+        android:layout_alignBaseline="@id/tv_store_list_dish_price"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:drawableLeft="@mipmap/meijin_false"
+        />
+
+</RelativeLayout>

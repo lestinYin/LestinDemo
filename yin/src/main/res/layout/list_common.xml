@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <!--<include-->
+        <!--layout="@layout/include_title_bar"/>-->
+
+    <com.lestin.yin.widget.statelayout.PrimaryStateLayout
+        android:id="@+id/stateFullLayouts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.core.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recylerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                />
+        </androidx.core.widget.SwipeRefreshLayout>
+    </com.lestin.yin.widget.statelayout.PrimaryStateLayout>
+
+</RelativeLayout>

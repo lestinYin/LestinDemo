@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/stfContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:id="@+id/stProgress"
+        style="@style/stfProgress"
+        />
+
+    <ImageView
+        android:id="@+id/stImage"
+        style="@style/stfImage"
+        android:src="@drawable/no_data_circle"
+        tools:ignore="ContentDescription"
+        />
+
+    <TextView
+        android:id="@+id/stMessage"
+        style="@style/stfMessage"
+        android:text="@string/stfErrorMessage"
+        />
+
+    <Button
+        android:id="@+id/stButton"
+        style="@style/stfButton"
+        android:text="@string/stfButtonText"
+        />
+
+</LinearLayout>

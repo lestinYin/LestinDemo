@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:top="3px" />
+            <solid android:color="#40D5D5D5" />
+            <corners android:radius="@dimen/dp_10" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:top="3px" />
+            <solid android:color="#50D5D5D5" />
+            <corners android:radius="@dimen/dp_10" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:top="3px" />
+            <solid android:color="#60D5D5D5" />
+            <corners android:radius="@dimen/dp_10" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:top="3px" />
+            <solid android:color="#70D5D5D5" />
+            <corners android:radius="@dimen/dp_10" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding android:top="3px" />
+            <solid android:color="#80D5D5D5" />
+            <corners android:radius="@dimen/dp_10" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="@dimen/dp_10"
+                android:topRightRadius="@dimen/dp_10" />
+            <solid android:color="#FFFFFF" />
+            <padding
+
+                android:top="3px" />
+        </shape>
+    </item>
+</layer-list>

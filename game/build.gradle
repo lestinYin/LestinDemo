@@ -30,12 +30,17 @@ android {
     }
 
     sourceSets {
-        main{
-            if(LOGIN_IS_APPLICATION.toBoolean()) {
+        main {
+            if (LOGIN_IS_APPLICATION.toBoolean()) {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
             }
+        }
+    }
+    kotlin{
+        experimental {
+            coroutines 'enable'
         }
     }
 
@@ -50,4 +55,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
+
 }
